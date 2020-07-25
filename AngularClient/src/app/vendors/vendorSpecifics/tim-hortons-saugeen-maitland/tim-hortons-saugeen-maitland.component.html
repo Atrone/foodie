@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+div.scrollmenu {
+  background-color: #4F2D82;
+}
+div.scrollmenu a {
+  display: inline-block;
+  color: light-blue;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+.a:hover {
+  background-color: #777;
+}
+
+</style>
+<body>
+<!-- !PAGE CONTENT! -->
+<h1>Tims at Saugeen</h1> 	  
+<button style="display: block;
+  margin-left: auto;
+  margin-right: auto;">Checkout</button>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:20px">
+
+  <!-- First Photo Grid-->
+  <h1>Coffee</h1>
+  <div class="scrollmenu"> 
+
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+   <div *ngFor="let i of itemTitlesCoffee; let z = index" style= "position:float;">
+
+    <div class="w3-quarter w3-padding-16">
+	   <a>
+      <img src="{{itemPicturesCoffee[z]}}" alt="Sandwich" style="width:100%">
+      <h3>{{i}}</h3>
+	  <p>${{itemPricesCoffee[z]}}</p>
+      <p>{{itemQuantitiesCoffee[z]}} in cart.</p>
+	  <button (click)="openDialog(i,z)">Select</button>
+    	</a>
+	</div>
+	</div>
+  </div>
+  </div>
+  <button style="display: block;
+  margin-left: auto;
+  margin-right: auto;">Checkout</button>
+  
+  <!-- Second Photo Grid-->
+  <h1>Donuts</h1>
+  <div class="scrollmenu"> 
+
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+   <div *ngFor="let i of itemTitlesDonut; let z = index" style= "position:float;">
+
+    <div class="w3-quarter w3-padding-16">
+	   <a>
+      <img src="{{itemPicturesDonut[z]}}" alt="Sandwich" style="width:100%">
+      <h3>{{i}}</h3>
+	  <p>${{itemPricesDonut[z]}}</p>
+      <p>{{itemQuantitiesDonut[z]}} in cart.</p>
+	  <button (click)="openDialog(i,z)">Select</button>
+    	</a>
+	</div>
+	</div>
+  </div>
+  </div>
+  <button style="display: block;
+  margin-left: auto;
+  margin-right: auto;">Checkout</button>
+    
+<!-- End page content -->
+</div>
+
+</body>
+</html>

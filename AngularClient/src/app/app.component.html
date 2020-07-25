@@ -1,0 +1,22 @@
+<head> <meta name="description" content="Mobile order and pick up food from restaurants and vendors all over Western's campus and London ON. Mobileats provides a universal mobile ordering hub for restaurants, vendors, and customers."/></head>
+
+<mat-toolbar color="primary" class="expanded-toolbar">
+  <button mat-button routerLink="/"><img src="https://i.imgur.com/NZlCI7k.gif" style="width:15%; height:100%;">
+{{title}}</button>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button mat-button *ngIf="isAuthenticated" routerLink="/cart"><mat-icon>card_travel</mat-icon></button>
+    <button mat-button *ngIf="!isAuthenticated" (click)="login()"> Login </button>
+    <button mat-button *ngIf="isAuthenticated" (click)="logout()"> Logout </button>
+		<button mat-button *ngIf="isAuthenticated">{{email}}</button>
+  </div>
+  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+  <button mat-menu-item *ngIf="!isAuthenticated" (click)="login()"> Login </button>
+  <button mat-menu-item *ngIf="isAuthenticated" (click)="logout()"> Logout </button>
+  <button mat-menu-item *ngIf="isAuthenticated">{{email}}</button>
+</mat-menu>
+<router-outlet></router-outlet>
+

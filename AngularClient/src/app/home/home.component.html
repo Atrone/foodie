@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Verdana";
+  letter-spacing: 3px;
+}
+div.hero {
+  background-image: url(https://i.imgur.com/x52S9VX.jpg);
+  background-size: 100% 100%;
+  box-shadow: inset 0 0 5px 2px #282a2d;
+
+}
+.lead{
+color: white;
+font-size: 20px;
+text-shadow: 2px 2px black;
+}
+
+</style>
+<body>
+<head> <meta name="description" content="Mobile order and pick up food from restaurants and vendors all over Western's campus and London ON. Mobileats provides a universal mobile ordering hub for restaurants, vendors, and customers."/></head>
+
+<div class="hero">
+  <div style= "transform: translate(0px, 0px);">
+    <h1 style="color:#4F2D82; font-weight:bold; font-size: 50px; text-shadow: 2px 2px black;">Why wait?</h1>
+    <p class="lead">{{instructionText}}</p>
+	<p class="lead">What's Mobileats? Scroll and find out!</p>
+		<input type="text" ngx-google-place *ngIf="flag" (onSelect)="onAddressChange($event)" style="width:50%">
+	<p class="lead">{{infoText}}</p>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="https://uk.urbanest.com/wp-content/uploads/Students-eating-out.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About Mobileats</h1><br>
+      <h5 class="w3-center">Tradition since 1889</h5>
+      <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
+      <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Just a piece of our menu</h1><br>
+      <h4>Tim Hortons</h4>
+      <p class="w3-text-grey">A canadian classic. Coffee, donuts, whatever they have, so do we.</p><br>
+    
+      <h4>Barakat</h4>
+      <p class="w3-text-grey"></p><br>
+	  
+	  <h4>Da Vinci's</h4>
+      <p class="w3-text-grey"></p><br>
+      
+	  <h4>Essex cafe</h4>
+      <p class="w3-text-grey">A changing menu from all over the world payable by student card.</p><br>
+
+	  <h4>And much more...</h4>
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="https://i.imgur.com/l2pOiZ7.jpg" class="w3-round w3-image " alt="Tims" style="width:100%">
+	  <img src="https://i.imgur.com/s9a1nuk.jpg" class="w3-round w3-image " alt="Barakat" style="width:100%">
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1>Contact</h1><br>
+    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+    <p class="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
+    <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+</body>
+</html>

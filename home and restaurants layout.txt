@@ -1,0 +1,11 @@
+home:
+type location (drop down) AIzaSyD-EQhEcjF9sunfaL8qTQnT7UukPlia10U
+about us (text)
+
+
+// TODO May 12
+once location is chosen from drop down,
+restaurants:
+search for restaurants (drop down)
+every restaurant categorized by discounts, genre, popularity, price, distance DONE
+Change location button (back to home screen) DONE

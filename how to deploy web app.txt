@@ -1,0 +1,21 @@
+orgin server changed
+port server changed
+google config redirect server changed (use www and wait a bit)
+services angular changed
+routing changed to hash
+vendors mobile style added:
+@media (max-width: 550px){div.hero {
+  display:none;
+}
+}
+steps to deploy:
+server:
+app.use(express.static('src/dist/AngularClient')); // before any app.use
+then the changes above
+
+client:
+the changes above
+
+then:
+ng build
+and git stuff

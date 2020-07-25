@@ -1,0 +1,42 @@
+TODO May 25:
+What: 
+get specific vendor page done
+How: 
+base html looks fine,
+select button must give popup for customization and quantity
+cart data must be stored in the component and home button on menu bar will display cart?
+checkout brings them to checkout screen
+
+Tasks:
+populate html with mongo data; the for loop already works (easy) DONE
+make popup appear on select button (?) DONE
+SAT:
+design the customization popup page (?): DONE
+ populate with mongo data in a similar fashion to the specific vendor page
+ radio buttons for options
+ text for additional customization
+ quantity +- buttons
+ confirm button to close the pop up
+make the customization popup page functional (?): PRETTY MUCH DONE
+ everything selected is known to the cart page and the quantity is known to the specific vendor page DONE
+ everything selected that is known to the cart page is in mongo (LOCAL STORAGE)
+SUN:
+design a cart page (?):
+ populate with mongo data in a similar fashion to the specific vendor page DONE
+ gets paypal info (?)
+ checkout after paypal is given
+make the cart page functional (?): 
+ edit cart data
+ after checkout, an order is created and stored in mongoDB (JSON)
+
+database structure:
+ collection for items (food items and customization options)
+ collection for cart (order specifics and email as id)
+ //collection for each order (same as cart w/ paypal info)
+
+future developments:
+more payment options
+push to cashier screen
+reorder regular orders
+save payment info to account (soon)
+automate angular component creation 

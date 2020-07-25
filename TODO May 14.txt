@@ -1,0 +1,12 @@
+TODO:
+
+food genres in a scroll bar DONE
+Populate the categories with Mongo data DONE
+Sort the near you category by distance DONE
+steps:
+    send http post to backend, receive distance and time for driving and walking
+    sort (flesh out later)
+
+VENDORS LAYOUT: (just like skip)
+Genres (fixed genres)
+Near you (up to 5 km away)

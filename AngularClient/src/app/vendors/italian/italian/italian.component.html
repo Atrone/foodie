@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Verdana";
+  letter-spacing: 3px;
+}
+p.restaurantTitle
+{
+  font-family: "Verdana";
+  letter-spacing: 3px;
+}
+p.vendorInfo
+{
+  font-family: "Verdana";
+  letter-spacing: 3px;
+  font-size: 12px;
+
+}
+.center {
+  margin: auto;
+  width: 54.5%;
+  border: 3px solid #800080;
+  padding: 10px;
+}
+div.hero {
+  text-align:center;
+  display: table;
+  width: 100%;
+}
+.td
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+div.scrollmenu {
+  background-color: #ccccff;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: light-blue;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+
+div.regularmenu {
+  background-color: #ccccff;
+}
+
+.a:hover {
+  background-color: #777;
+}
+.state-container-dropdown{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	max-height: 300px;
+	background: #F6F6F6;
+	overflow-y: auto;
+}
+.vendors{
+	padding: 10px;
+	font-family: S;
+	color: #A550BC;
+}
+.vendors:hover{
+	background: #C2C2C2;
+}
+.search {
+  width: 100%;
+  position: relative;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -1395%);
+}
+
+</style>
+<body>
+<div class="wrap">
+<div class="hero">
+   <div class="search">
+      <input (click)="toggleDropDown()" [(ngModel)]="searchText" class="searchTerm" placeholder="What are you looking for?">
+      <div (clickOutside)="toggleDropDown()" *ngIf="showDropDown" class="state-container-dropdown">
+  <div class="vendors" (click)="chosen(c)" *ngFor="let c of characters | filter : searchText">
+    {{c}}
+  </div>
+  </div>
+</div>
+   </div>
+</div>
+
+
+      <hr>
+
+  <div  *ngIf="newLocationFlag" class="w3-row w3-padding-extra-large" id="near" style="height:100%; width:100%">
+    <h3 style="font-weight:bold; text-align:center; font-family: 'Arial Black'; font-size: 32px;">Italian Near You</h3>
+
+ <div class="everything" *ngFor="let v of vendorAddress; let i = index" style= "position:float;">
+   <a (click)="goToVendorSpecificPage(v)">
+
+  <h4 style="font-weight:bold; text-align: center;">{{vendorTitle[i]}}</h4>
+	        <img src={{vendorImages[i]}} class="w3-round w3-image " style="display: block;
+  margin-left: auto;
+  margin-right: auto;"> 
+	  <p style="text-align: center;" class="vendorInfo">{{vendorDistance[i]}}</p>
+	  <p style="text-align: center;" id="demo" class="vendorInfo">{{v}}</p> 
+   </a>
+
+  </div>
+  </div>
+        <hr>
+
+
+<!-- End page content -->
+</body>
+</html>
